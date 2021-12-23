@@ -1,6 +1,6 @@
 package chap05.sec06.exam01_array;
 
-public class ArrayCreateByValueListExample {
+public class A_ArrayCreateByValueListExample {
 
 	public static void main(String[] args) {
 		

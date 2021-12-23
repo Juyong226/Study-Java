@@ -1,6 +1,6 @@
 package chap05.sec06.exam01_array;
 
-public class ArrayCreateByNewExample {
+public class B_ArrayCreateByNewExample {
 
 	public static void main(String[] args) {
 		
