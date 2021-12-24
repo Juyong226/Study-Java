@@ -109,5 +109,5 @@ public class EnumWeekExample {
 			System.out.println(day == Week.MONDAY);
 		}
 	}
-
+	
 }

@@ -37,9 +37,10 @@ public class Sec567Practice {
 			}
 			totalLength += inner.length;
 		}
+		avg = sum / (double) totalLength;
 		
 		System.out.println("sum: " + sum);
-		System.out.println("avg: " + sum / (double) totalLength);
+		System.out.println("avg: " + avg);
 		System.out.println("=========================");
 		
 	}
