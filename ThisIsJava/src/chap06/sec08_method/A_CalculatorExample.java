@@ -21,6 +21,8 @@ public class A_CalculatorExample {
 		byte y = 3;
 		double result4 = myCalc.divide(x, y);
 		System.out.println("나누기 결과: " + result4);
+		
+		myCalc.execute();
 	}
 
 }

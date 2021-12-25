@@ -49,7 +49,21 @@ public class Calculator {
 		return sum;
 	}
 	
+	double getAvg(int ... values) {
+		int sum = plus(values);
+		return (double) sum / values.length;
+	}
+	
 	double divide(int x, int y) {
 		return (double) x / y;
+	}
+	
+	void execute() {
+		double result = getAvg(6, 10, 3, 22);
+		println("실행 결과: " + result);
+	}
+	
+	void println(String message) {
+		System.out.println(message);
 	}
 }
