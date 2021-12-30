@@ -39,14 +39,26 @@ import java.lang.annotation.Target;
 
 /*
  * @Retention을 통해 어노테이션의 유지 정책을 선택할 수 있다.
- * 어노테이션의 유지 정책이란 해당 어노테이션을 어느 시점까지 유지할 것인지 정하는 것으로
+ * 어노테이션의 유지 정책이란 해당 어노테이션을 어느 시점까지 유지할 것인지 정하는 것으로 java.lang.annotation.RetentionPolicy에 정의된 열거 상수 중에서 선택한다.
  * 1. SOURCE: 소스코드에서만 유지, 컴파일하면서 @AnnotationName은 컴파일 되지 않음
  * 2. CLASS: 어노테이션을 함께 컴파일, 하지만 실행 단계에서는 어노테이션의 정보를 얻을 수 없음
- * 3. RUNTIME: 프로그램 실행 중에서  
+ * 3. RUNTIME: 프로그램 실행 중 리플렉션을 이용하여 어노테이션의 정보를 얻을 수 있음
  * */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PrintAnnotation {
 
+	/*
+	 * 엘리먼트
+	 * 
+	 * 엘리먼트는 다음 구조로 정의한다.
+	 * [타입][엘리먼트 이름]() default [디폴트 값];
+	 * 
+	 * 엘리먼트의 타입에는 기본 타입, 참조 타입, 배열 타입을 사용할 수 있다. 
+	 * 엘리먼트 이름 뒤에는 만드시 ()를 붙여야 한다.
+	 *
+	 * value()는 기본 엘리먼트를 의미한다. 
+	 * 어노테이션을 적용하는 쪽에서 엘리먼트에 대입할 값들을 명시적으로 넘겨주는데, 만약 그 값이 하나라면 자동으로 value에 초기화 된다.
+	 * */
 	String value() default "=";
 	int number() default 30;
 }
